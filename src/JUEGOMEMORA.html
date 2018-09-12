@@ -6,7 +6,7 @@
         var cartaPrimera, cartaSegunda;
         var colorDelante = "yellow";
         var colorAtras = "blue";
-        var colorCanvas = "green";
+        var colorCanvas = "red";
         var inicioX = 30;
         var inicioY = 30;
         var cartaMargen = 30;
@@ -176,30 +176,53 @@
                     cartas_array[cartaSegunda].y,
                     cartas_array[cartaSegunda].ancho,
                     cartas_array[cartaSegunda].largo);
-                var inde=Number.parseInt(cartasarray[cartaSegunda].info);
+                //var inde=Number.toString(cartasarray[cartaSegunda].info);
+                var inde=Number.parseInt(cartaSegunda);
                 switch(inde) {
                     case 0:
-                        window.alert("poder legislativo" );
+                        window.alert("poder legislativo0" )
                         break;
                     case 1:
-                        window.alert("poder legislativo1" );
+                        window.alert("poder legislativo1" )
                         break;
                     case 2:
-                        window.alert("poder legislativo2" );
+                        window.alert("poder legislativo2" )
                         break;
                     case 3:
-                        window.alert("poder legislativo3" );
+                        window.alert("poder legislativo3" )
                         break;
                     case 4:
-                        window.alert("poder legislativo4" );
+                        window.alert("poder legislativo4" )
                         break;
                     case 5:
-                        window.alert("poder legislativo5" );
+                        window.alert("poder legislativo5")
+                        break;
+                    case 6:
+                        window.alert("poder legislativo6" )
+                        break;
+                    case 7:
+                        window.alert("poder legislativo7" )
+                        break;
+                    case 8:
+                        window.alert("poder legislativo8" )
+                        break;
+                    case 9:
+                        window.alert("poder legislativo9" )
+                        break;
+                    case 10:
+                        window.alert("poder legislativo10" )
+                        break;
+                    case 11:
+                        window.alert("poder legislativo11" )
+                        break;
+                    case 12:
+                        window.alert("poder legislativo12" )
                         break;
                 }
 
                 cartas_array[cartaPrimera].x = -1;
                 cartas_array[cartaSegunda].x = -1;
+
             }
             if (cartas < 6) {
                 canvas.addEventListener("click", selecciona, false);
@@ -208,7 +231,8 @@
                 cartas_array = [];
                 canvas.addEventListener("click", iniciar, false);
                 ctx.fillStyle = "white";
-                ctx.fillText("JUEGO TERMINADO", 120, canvas.height / 2);
+                ctx.fillText("JUEGO TERMINADO ", 120, canvas.height / 2);
+                ctx.fillText("picar para jugar ", 150, canvas.height / 5);
             }
         }
 
@@ -238,41 +262,11 @@
             background: green;
         }
     </style>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 </head>
 <body>
-<!BOTON>
-<div class="container">
-    <h2>Small Modal</h2>
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Small Modal
-    </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Hola mundo.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!BOTON>
 <h1>Memorama Congreso</h1>
 <canvas id="miCanvas"></canvas>
 </body>
